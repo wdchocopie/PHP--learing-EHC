@@ -1,2 +1,2 @@
-Bài 1
+#Bài 1
 ![result](result1.png)
