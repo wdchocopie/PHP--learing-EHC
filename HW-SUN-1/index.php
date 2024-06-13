@@ -23,6 +23,7 @@
                 $password = $_POST['password'];
 
                 //accounts array
+                //username => role, password
                 $accounts = array(
                     "wdchocopie" => array("role" => "admin", "password" => "12345678"),
                     "tranlong" => array("role" => "user", "password" => "4321")
