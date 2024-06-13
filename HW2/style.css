@@ -1,0 +1,80 @@
+/* Center body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Form style */
+form {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Form title */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Style form fields */
+form input[type="text"],
+form input[type="password"],
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style radio buttons and checkbox */
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Align radio buttons horizontally */
+form .gender {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Style submit button */
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style submit button on hover */
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Style the terms of service */
+form .terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style the label for terms of service */
+form .terms label {
+    margin-left: 5px;
+}
