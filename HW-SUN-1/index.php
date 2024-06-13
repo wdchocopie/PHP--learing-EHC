@@ -22,33 +22,36 @@
                 $username = $_POST['username'];
                 $password = $_POST['password'];
 
-                $admin_username = "carlos";
-                $admin_password = "12345678";
-
-                $user_username = "peter";
-                $user_password = "1234";
+                //account array
+                //admin account
+                $admin = array("carlos" => "12345678");
+                //user account
+                $user = array("peter" => "4321");
 
                 //check if username and password is empty
                 if (empty($username) || empty($password)){
                     echo "<br>Username or Password is empty";
+                } else {
+                    //check if username and password is valid
+                    if (array_key_exists($username, $admin) && $password == $admin[$username]){
+                        echo "<br>Login successful";
+                        echo "<br><h4>Welcome Admin</h4>";
+                        echo "User Account:<br>";
+                        //display user account
+                        foreach ($user as $user_username => $user_password) {
+                            echo "Username: " . $user_username . "<br>";
+                            echo "Password: " . $user_password . "<br><br>";
+                        }
+                    //check if username and password is valid
+                    } else if (array_key_exists($username, $user) && $password == $user[$username]){
+                        echo "<br>Login successful";
+                        echo "<br><h4>Welcome User</h4><br>";
+                    } else {
+                        echo "<br>Invalid username or password";
+                    }
                 }
-         
-                //check if username and password is valid
-                if ($username == $admin_username && $password == $admin_password){
-                    echo "<br>Login successful";
-                    echo "<br><h4>Welcome Admin</h4>Admin Account: <br> username:$admin_username <br> password:$admin_password";
-                    echo "<br> <br>User Account: <br> username:$user_username <br> password:$user_password";
-
-                }
-                else if ($username == $user_username && $password == $user_password){
-                    echo "<br>Login successful";
-                    echo "<br><h4>Welcome User</h4><br>";
-                }
-                else{
-                    echo "<br>Invalid username or password";
-                }
-        }
-
+            }
         ?>
         
     </body>
+</html>
